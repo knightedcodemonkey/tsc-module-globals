@@ -1,0 +1,16 @@
+{
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "prettier": "^3.2.5",
+    "tsx": "^4.11.0",
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "prettier": "prettier -w .",
+    "build:esm": "tsc",
+    "build:cjs": "tsx buildCjs.ts",
+    "esm": "npm run build:esm && node dist/file.js",
+    "cjs": "npm run build:cjs"
+  }
+}
