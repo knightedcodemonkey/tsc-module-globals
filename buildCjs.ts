@@ -12,7 +12,7 @@ spawnSync("node", ["./dist/file.js"], { stdio: "inherit" });
 
 // Cleanup
 pkg.type = "module";
-await writeFile("./package.json", JSON.stringify(pkg, null, 2));
+await writeFile("./package.json", `${JSON.stringify(pkg, null, 2)}\n`);
 await writeFile(
   "src/file.ts",
   src.replace(/\bimport\.meta\.dirname\b/, "__dirname"),
